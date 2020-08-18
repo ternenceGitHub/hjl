@@ -75,7 +75,7 @@ authenticator = standalone
 account = 0e1d5cecf54c1dd94c41e0f978f1e15e
 server = https://acme-v02.api.letsencrypt.org/directory
 ```
-+ 设置定时任务跟新证书
++ 设置定时任务更新证书
 ```shell
 00 00 1 * * /usr/bin/certbot renew --force-renewal --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx" >> /var/log/letsencrypt/letsencrypt.log 2>&1
 ```
